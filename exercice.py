@@ -4,18 +4,29 @@
 
 def order(values: list = None) -> list:
     if values is None:
-        # TODO: demander les valeurs ici
-        pass
+        values = []
+        list = input("list 10 values separated by commas: ")
+        values = list.split(',')
+        values = sorted(values)
 
-    return []
+
+    return values
 
 
 def anagrams(words: list = None) -> bool:
     if words is None:
-        # TODO: demander les mots ici
-        pass
-
-    return False
+        words = []
+        first_word = ()
+        second_word = ()
+        list = input("Écrire 2 mots de même longueur séparés d'un espace")
+    first_word = list[1].split()
+    second_word = list[2].split()
+    for el in first_word:
+            if el == range(first_word):
+                continue
+            else:
+                print('False')
+            print('True')
 
 
 def contains_doubles(items: list) -> bool:
