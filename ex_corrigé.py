@@ -11,8 +11,7 @@ def anagrams(words: list = None) -> bool:
     if words is None:
         words = []
         while len(words) < 2:
-            words.append(input('svp entrez un mot: \n'))
-
+            words.append(input('svp entrez un mot\n'))
 
     return sorted(words[0]) == sorted(words[1])
 
@@ -21,12 +20,11 @@ def contains_doubles(items: list) -> bool:
     return len(set(items)) != len(items)
 
 
-
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
     best_student = dict()
     for key, value in student_grades.values():
-        average = sum(value)/len(value)
+        average = sum(value) / len(value)
 
         if len(best_student) == 0 or list(best_student.values())[0] < average:
             best_student = {key: average}

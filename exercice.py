@@ -3,29 +3,21 @@
 
 
 def order(values: list = None) -> list:
-    if values is None:
-        values = []
-        list = input("list 10 values separated by commas: ")
-        values = list.split(',')
-        values.sort()
-
-
-
-    return values
+    pass
 
 
 def anagrams(words: list = None) -> bool:
-    if words is None:
-       pass
+    value1 = ()
+    value1 == input('écrire un mot:\n')
+    value2 = ()
+    value2 == input('écrire un mot:\n')
+
+    return sorted(value1) == sorted(value2)
 
 
 def contains_doubles(items: list) -> bool:
-    for el in items:
-        if el == range(items):
-            print('contains doubles')
-        else:
-            continue
 
+    return len(set(items)) != len(items)
 
 
 def best_grades(student_grades: dict) -> dict:
