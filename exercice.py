@@ -2,15 +2,19 @@
 # -*- coding: utf-8 -*-
 
 
+def est_bissextile(annee):
+    # On suppose que annee > 0
+    pass
+
 def order(values: list = None) -> list:
     pass
 
 
 def anagrams(words: list = None) -> bool:
-    value1 = ()
-    value1 == input('écrire un mot:\n')
-    value2 = ()
-    value2 == input('écrire un mot:\n')
+    value1 = []
+    value1 = value1.append(input('écrire un mot:\n'))
+    value2 = []
+    value2 = value2.append(input('écrire un mot:\n'))
 
     return sorted(value1) == sorted(value2)
 
