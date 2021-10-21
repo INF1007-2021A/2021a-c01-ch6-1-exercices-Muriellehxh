@@ -12,8 +12,8 @@ Traceback (most recent call last):
     output = [exercice.anagrams(v) for v in words]
   File "test_exercice.py", line 35, in <listcomp>
     output = [exercice.anagrams(v) for v in words]
-  File "/home/runner/work/2021a-c01-ch6-1-exercices-Muriellehxh/2021a-c01-ch6-1-exercices-Muriellehxh/exercice.py", line 11, in anagrams
-    value1 == input('écrire un mot:\n')
+  File "/home/runner/work/2021a-c01-ch6-1-exercices-Muriellehxh/2021a-c01-ch6-1-exercices-Muriellehxh/exercice.py", line 15, in anagrams
+    value1 = value1.append(input('écrire un mot:\n'))
 EOFError: EOF when reading a line
 
 ======================================================================
@@ -77,6 +77,6 @@ None
 + [[-2, 1, 6, 9], ['2', 'a', 'hello']] : Mauvais ordre
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.002s
 
 FAILED (failures=3, errors=1)
