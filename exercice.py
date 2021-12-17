@@ -38,18 +38,15 @@ def frequence(sentence: str) -> dict:
     for letter in letter_list:
         dict_letters[letter] = letter_list.count(letter)
 
-    list_letters = sorted(dict_letters.items(), key=lambda x: x[1], reverse=True)
+    sorted_dict = dict(sorted(dict_letters.items(), key= lambda letter : letter[1], reverse=True))
 
+    dict_values_above = {}
+    for letter in sorted_dict:
+        if sorted_dict[letter] > 5:
+            dict_values_above[letter] = sorted_dict[letter]
+            print(f"Le caractere {letter} revient {dict_letters[letter]} fois")
 
-    real_dict = {}
-    for tup in list_letters:
-        if tup[1] > 5:
-            real_dict[tup[0]] = tup[1]
-
-    x = real_dict
-    print(x)
-
-    return x
+    return dict_values_above
 
 
 def get_recipes():
