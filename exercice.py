@@ -11,29 +11,45 @@ def order(values: list = None) -> list:
 
 
 def anagrams(words: list = None) -> bool:
-    value1 = []
-    value1 = value1.append(input('écrire un mot:\n'))
-    value2 = []
-    value2 = value2.append(input('écrire un mot:\n'))
 
-    return sorted(value1) == sorted(value2)
-
+   pass
 
 def contains_doubles(items: list) -> bool:
 
-    return len(set(items)) != len(items)
+    pass
 
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
-    return {}
+    pass
 
 
 def frequence(sentence: str) -> dict:
     # TODO: Afficher les lettres les plus fréquentes
     #       Retourner le tableau de lettres
 
-    return {}
+    sentence_split = sentence.split()
+    letter_list = []
+    for word in sentence_split:
+        for letter in word:
+            letter_list.append(letter)
+
+    dict_letters = {}
+    for letter in letter_list:
+        dict_letters[letter] = letter_list.count(letter)
+
+    list_letters = sorted(dict_letters.items(), key=lambda x: x[1], reverse=True)
+
+
+    real_dict = {}
+    for tup in list_letters:
+        if tup[1] > 5:
+            real_dict[tup[0]] = tup[1]
+
+    x = real_dict
+    print(x)
+
+    return x
 
 
 def get_recipes():
@@ -56,9 +72,7 @@ def main() -> None:
     my_list = [3, 3, 5, 6, 1, 1]
     print(f"Ma liste contient-elle des doublons? {contains_doubles(my_list)}")
 
-    grades = {"Bob": [90, 65, 20], "Alice": [85, 75, 83]}
-    best_student = best_grades(grades)
-    print(f"{list(best_student.keys())[0]} a la meilleure moyenne: {list(best_student.values())[0]}")
+
 
     sentence = "bonjour, je suis une phrase. je suis compose de beaucoup de lettre. oui oui"
     frequence(sentence)
